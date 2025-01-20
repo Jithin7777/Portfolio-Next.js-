@@ -79,6 +79,14 @@ export const assets = {
 
 export const workData = [
     {
+        title: 'Bitebox',
+        description: 'I created this MERN stack-based food delivery app using React Bootstrap, Tailwind CSS, HTML, and CSS for the frontend. The app uses Context API for state management, integrates Twilio and Nodemailer for user authentication and notifications, and Stripe for payment processing. The admin page allows easy management of orders and food items.',
+        bgImage: '/work-13.png',
+        bgImage1: '/work-13(1).png',
+        bgImage2: '/work-13(2).png',
+    },
+    
+    {
         title: 'STARBUCKS CLONE',
         description: 'I created this site using Bootstrap 5, HTML, and CSS to deliver a responsive and visually appealing design with a focus on clean structure and modern styling.',
         bgImage: '/work-7.png',
@@ -86,6 +94,14 @@ export const workData = [
         url:'https://jithin7777.github.io/Starbucks_clone/',
 
     },
+    {
+        title: 'Customizable Dashboard',
+        description: 'I created this customizable dashboard using Next.js, Tailwind CSS, ShadCN UI, and Context API. The app allows users to manage widget visibility (show/hide) with a clean and modern design. It also integrates MongoDB for data storage, offering a flexible and dynamic experience.',
+        bgImage: '/work-14.png',
+        bgImage1: '/work-14(1).png',
+        url: 'https://customizable-dashboard-nextjs.vercel.app/',
+    },
+    
     {
         title: 'Google Gemini App',
         description: 'I developed the Google Gemini App using React, React Bootstrap, and the Google Gemini API to create a sleek, responsive, and feature-rich application',

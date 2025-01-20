@@ -77,7 +77,7 @@ const Works = () => {
                 </div>
                 <div>
                   <img
-                    src={work.bgImage}
+                    src={work.bgImage2}
                     alt={work.title}
                     className="w-full h-40 sm:h-40 md:h-32 lg:h-48 object-cover"
                   />
