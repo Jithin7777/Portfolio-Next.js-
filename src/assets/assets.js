@@ -83,7 +83,7 @@ export const workData = [
         description: 'I created this site using Bootstrap 5, HTML, and CSS to deliver a responsive and visually appealing design with a focus on clean structure and modern styling.',
         bgImage: '/work-7.png',
         bgImage1: '/work-8.png',
-        url:'https://geminiclonesite.netlify.app/',
+        url:'https://jithin7777.github.io/Starbucks_clone/',
 
     },
     {
