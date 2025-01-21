@@ -5,9 +5,9 @@ import React from "react";
 const ThemeToggle = () => {
   return (
     <div>
-      <button className="mt-2">
+      {/* <button className="mt-2">
         <Image src={assets.moon_icon} alt="" className="w-6 mb-3" />
-      </button>
+      </button> */}
     </div>
   );
 };

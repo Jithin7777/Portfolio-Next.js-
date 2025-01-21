@@ -3,13 +3,14 @@ import React, { useState, useEffect } from 'react';
 import Navbar from './components/Navbar/Navbar';
 import Header from './components/Header/Header';
 import Works from './components/MyWorks/Works';
-import 'slick-carousel/slick/slick.css'; // Import Slick carousel styles
-import 'slick-carousel/slick/slick-theme.css'; // Import Slick theme styles
+import 'slick-carousel/slick/slick.css'; 
+import 'slick-carousel/slick/slick-theme.css'; 
 import Contact from './components/Contact/Contact';
 import Skills from './components/Skills/Skills';
+import Footer from './components/Footer/Footer';
 
 const Page = () => {
-  const [scrollToBottom, setScrollToBottom] = useState(true); // Default: scroll to bottom
+  const [scrollToBottom, setScrollToBottom] = useState(true); 
 
   // Handle scroll position within useEffect
   useEffect(() => {
@@ -18,20 +19,18 @@ const Page = () => {
       const scrollHeight = document.documentElement.scrollHeight;
       const clientHeight = document.documentElement.clientHeight;
 
-      // If the user is at the top or near the top
       if (scrollPosition < 100) {
-        setScrollToBottom(true); // Button will scroll to bottom
+        setScrollToBottom(true); 
       }
-      // If the user is near the bottom
       else if (scrollPosition + clientHeight >= scrollHeight - 100) {
-        setScrollToBottom(false); // Button will scroll to top
+        setScrollToBottom(false);
       }
     };
 
-    window.addEventListener('scroll', handleScroll); // Listen to scroll events
+    window.addEventListener('scroll', handleScroll); 
 
     return () => {
-      window.removeEventListener('scroll', handleScroll); // Cleanup the event listener
+      window.removeEventListener('scroll', handleScroll); 
     };
   }, []);
 
@@ -56,11 +55,11 @@ const Page = () => {
       <Skills/>
 
       <Contact />
-
+   <Footer/>
       {/* Single Button for both Scroll To Top/Bottom */}
       <button
         onClick={scrollToBottom ? scrollToBottomAction : scrollToTop}
-        className="fixed bottom-4 right-4 bg-black text-white p-3 rounded-full hover:bg-black transition"
+        className="fixed bottom-20 right-4 bg-black text-white p-3 rounded-full hover:bg-black transition"
       >
         {scrollToBottom ? '↓ Bottom' : '↑ Top'}
       </button>

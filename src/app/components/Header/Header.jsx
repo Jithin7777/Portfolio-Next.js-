@@ -4,8 +4,8 @@ import Image from 'next/image'
 const Header = () => {
   return (
     <div className="px-4 py-20 sm:px-8 lg:px-12">
-      <div className="flex justify-center mt-10">
-         <Image src={assets.profile_img} alt="Profile" className="w-24 sm:w-32 lg:w-40 rounded-full" />
+      <div className="flex justify-center mt-8">
+         <Image src={assets.profile_img} alt="Profile" className="w-28 sm:w-32 lg:w-40 rounded-full" />
       </div>
       <h3 className="flex font-Ovo gap-2 items-center text-lg sm:text-2xl md:text-xl justify-center pt-6 sm:pt-10 text-center">
         Hi, I'm Jithin Jose 
