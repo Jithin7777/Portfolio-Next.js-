@@ -142,7 +142,7 @@ export const workData = [
     description:
 "I developed StaffSphere, an Employee Management App with full CRUD functionality, built using Angular, JSON Server, Angular Material, and Bootstrap 5. The app features an intuitive admin login, seamless employee data management, search, and filter capabilities, ensuring efficient and user-friendly operations.",    bgImage: "/work-15.png",
     bgImage1: "/work-15(1).png",
-    bgImage2: "/work-11.png",
+    bgImage2: "/work-15.png",
     bgImage1: "/work-15(1).png",
 
   },
