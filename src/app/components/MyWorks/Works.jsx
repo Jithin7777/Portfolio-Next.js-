@@ -45,7 +45,7 @@ const Works = () => {
   return (
     <div ref={workSectionRef} id="work" className="w-full py-8 bg-gray-50">
       <h2 className="font-Ovo text-center text-2xl sm:text-xl md:text-3xl lg:text-5xl">
-        My latest works
+        My Works
       </h2>
       <p className="font-Ovo text-center max-w-2xl mx-auto mt-5">
         Welcome to my portfolio! Explore a collection of projects showcasing my

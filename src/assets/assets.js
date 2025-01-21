@@ -138,6 +138,24 @@ export const workData = [
     url: "https://article-sphere-5.netlify.app/",
   },
   {
+    title: "StaffSphere",
+    description:
+"I developed StaffSphere, an Employee Management App with full CRUD functionality, built using Angular, JSON Server, Angular Material, and Bootstrap 5. The app features an intuitive admin login, seamless employee data management, search, and filter capabilities, ensuring efficient and user-friendly operations.",    bgImage: "/work-15.png",
+    bgImage1: "/work-15(1).png",
+    bgImage2: "/work-11.png",
+    bgImage1: "/work-15(1).png",
+
+  },
+  {
+    title: "Uber mobile app",
+    description:
+"I developed an Uber Mobile App Clone, focusing on the main four pages of the Uber mobile application. Built using React and React Bootstrap, this project replicates the mobile app interface, not the website design, ensuring a responsive and user-friendly experience.",    bgImage: "/uber.png",
+    bgImage1: "/work-16(1).png",
+    bgImage2: "/uber.png",
+    url: "https://article-sphere-5.netlify.app/",
+
+  },
+  {
     title: "taste harmony",
     description:
       "I created Taste Harmony, a dynamic restaurant website using React, React Bootstrap, and a Restaurants API, offering interactive and responsive views for users.",
