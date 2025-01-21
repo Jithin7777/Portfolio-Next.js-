@@ -152,7 +152,7 @@ export const workData = [
 "I developed an Uber Mobile App Clone, focusing on the main four pages of the Uber mobile application. Built using React and React Bootstrap, this project replicates the mobile app interface, not the website design, ensuring a responsive and user-friendly experience.",    bgImage: "/uber.png",
     bgImage1: "/work-16(1).png",
     bgImage2: "/uber.png",
-    url: "https://article-sphere-5.netlify.app/",
+    url: "https://ubermobileclone.netlify.app/",
 
   },
   {
