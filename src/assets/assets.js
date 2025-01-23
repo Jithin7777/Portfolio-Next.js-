@@ -295,4 +295,8 @@ export const skillsData = [
     name: "Vercel",
     logo: "/vercel.svg", 
   },
+  {
+    name: "Postman",
+    logo: "/postman.svg", 
+  },
 ];
