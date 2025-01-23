@@ -2,7 +2,7 @@ import { skillsData } from "@/assets/assets";
 
 const Skills = () => {
   return (
-    <div className="py-5" id="skill">
+    <div className="py-10" id="skill">
       <h2 className="font-Ovo mt-10 text-center text-2xl sm:text-3xl md:text-4xl lg:text-5xl">
         My Skills
       </h2>
