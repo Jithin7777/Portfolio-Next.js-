@@ -108,7 +108,7 @@ const Works = () => {
                   </button>
                 </DialogTrigger>
                 {/* Dialog Content */}
-                <DialogContent>
+                <DialogContent className='bg-white'>
                   <DialogHeader>
                     <DialogTitle className="">
                       {selectedWork?.title.split(" ").map((word)=>word.charAt(0).toUpperCase() + word.slice(1).toLowerCase()).join(' ')}
