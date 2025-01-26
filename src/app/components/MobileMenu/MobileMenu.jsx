@@ -8,13 +8,13 @@ import { HomeIcon, UserIcon, BriefcaseIcon, FolderIcon, PhoneIcon } from '@heroi
 const MobileMenu = ({ closeMenu, menuRef, isMenuOpen }) => {
   return (
     <div
-      className={`fixed inset-0 z-50 md:hidden transition-all duration-500 ${
+      className={`fixed inset-0  z-50 md:hidden transition-all duration-500 ${
         isMenuOpen ? 'opacity-100 visible' : 'opacity-0 invisible'
       }`}
     >
       {/* Dark Overlay */}
       <div
-        className="absolute inset-0 bg-black bg-opacity-50"
+        className="absolute inset-0 bg-black bg-opacity-50 "
         onClick={closeMenu}
       ></div>
 
@@ -26,7 +26,7 @@ const MobileMenu = ({ closeMenu, menuRef, isMenuOpen }) => {
         }`}
       >
         {/* Close Button */}
-        <div className="absolute top-5 left-6">
+        <div className="absolute top-5 left-6 ">
           <Image
             src={assets.close_black}
             alt="Close Menu"
