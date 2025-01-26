@@ -97,7 +97,7 @@ const Works = () => {
               {/* <p className="mt-2 text-sm sm:text-base text-gray-700">{work.description}</p> */}
 
               {/* Dialog Trigger Button */}
-              <Dialog className="">
+              <Dialog className="!rounded-xl">
                 <DialogTrigger asChild>
                   <button
                     onClick={() => setSelectedWork(work)}
@@ -108,7 +108,7 @@ const Works = () => {
                   </button>
                 </DialogTrigger>
                 {/* Dialog Content */}
-                <DialogContent className='bg-white'>
+                <DialogContent className='bg-white !rounded-xl '>
                   <DialogHeader>
                     <DialogTitle className="">
                       {selectedWork?.title.split(" ").map((word)=>word.charAt(0).toUpperCase() + word.slice(1).toLowerCase()).join(' ')}
