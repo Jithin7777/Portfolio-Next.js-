@@ -53,7 +53,7 @@ const Navbar = () => {
           isVisible ? "translate-y-0" : "-translate-y-full"
         }`}
       >
-        <h1 className="font-Ovo mb-3 text-2xl mt-3">Jithin Jose</h1>
+        <h1 className="font-Ovo mb-3 text-2xl mt-2">Jithin Jose</h1>
         <ul className="hidden md:flex space-x-8 rounded-md py-3 px-12 mb-3 mt-3 bg-white shadow-md">
           <li>
             <a
