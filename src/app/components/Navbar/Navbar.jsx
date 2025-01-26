@@ -10,7 +10,7 @@ const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isVisible, setIsVisible] = useState(true); 
   const [prevScrollY, setPrevScrollY] = useState(0); 
-  const visibilityThreshold = 200; 
+  const visibilityThreshold = 10; 
   const openMenu = () => {
     setIsMenuOpen(true);
     menuRef.current.style.transform = "translateX(0)";
