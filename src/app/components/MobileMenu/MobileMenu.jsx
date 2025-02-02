@@ -26,11 +26,11 @@ const MobileMenu = ({ closeMenu, menuRef, isMenuOpen }) => {
         }`}
       >
         {/* Close Button */}
-        <div className="absolute top-5 left-6 ">
+        <div className="absolute top-5 right-6 ">
           <Image
             src={assets.close_black}
             alt="Close Menu"
-            className="w-8 h-8 cursor-pointer"
+            className="w-6 h-6 cursor-pointer"
             onClick={closeMenu}
           />
         </div>
