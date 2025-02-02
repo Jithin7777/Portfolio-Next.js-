@@ -46,7 +46,7 @@ const Contact = () => {
       {/* Form Section */}
       <form onSubmit={onSubmit}
         action=""
-        className="mt-8 max-w-xl mx-auto bg-white shadow-md rounded-lg p-6 sm:p-10"
+        className="mt-8 max-w-xl mx-auto bg-white shadow-md border-spacing-7 rounded-tl-[20px] rounded-br-[20px] rounded-lg p-6 sm:p-10"
       >
         {/* Input Fields */}
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
@@ -55,14 +55,14 @@ const Contact = () => {
             name="name"
             placeholder="Enter your name"
             required
-            className="w-full px-4 py-2 text-gray-700 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-gray-200"
+            className="w-full rounded-xl px-4 py-2 text-gray-700 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-gray-200"
           />
           <input
             type="email"
             name="email"
             placeholder="Enter your email"
             required
-            className="w-full px-4 py-2 text-gray-700 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-gray-200"
+            className="w-full rounded-xl px-4 py-2 text-gray-700 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-gray-200"
           />
         </div>
 
@@ -72,14 +72,14 @@ const Contact = () => {
           name="message"
           placeholder="Enter your message"
           required
-          className="w-full mt-6 px-4 py-2 text-gray-700 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-gray-200"
+          className="w-full rounded-xl mt-6 px-4 py-2 text-gray-700 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-gray-200"
         ></textarea>
 
         {/* Submit Button */}
 
 <button
   type="submit"
-  className="w-full mt-6 px-6 py-3 bg-black text-white font-semibold rounded-lg hover:bg-black-600 transition duration-300 flex items-center justify-center space-x-2"
+  className="w-full mt-6 px-6 py-3 bg-black text-white font-semibold rounded-xl hover:bg-black-600 transition duration-300 flex items-center justify-center space-x-2"
 >
   <span>Submit now</span>
   <Image
@@ -87,7 +87,7 @@ const Contact = () => {
     alt="Right arrow"
     width={20} 
     height={20} 
-    className="ml-2" 
+    className="ml-2 " 
   />
 </button>
 
