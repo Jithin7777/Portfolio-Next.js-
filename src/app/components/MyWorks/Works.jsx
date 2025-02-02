@@ -101,7 +101,7 @@ const Works = () => {
                 <DialogTrigger asChild>
                   <button
                     onClick={() => setSelectedWork(work)}
-                    className="mt-3 px-4  px-10 py-2 bg-black text-white rounded-md hover:bg-gray-800 
+                    className="mt-3 px-4  px-10 py-2 bg-black text-white rounded-xl hover:bg-gray-800 
              text-sm sm:text-base md:text-lg  w-full sm:w-auto mx-auto"
                   >
                     View Details
@@ -127,7 +127,7 @@ const Works = () => {
                         href={selectedWork.url}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="mt-5 inline-block px-4 py-2 bg-black text-white text-center rounded-md hover:bg-black"
+                        className="mt-5 rounded-xl inline-block px-4 py-2 bg-black text-white text-center rounded-md hover:bg-black"
                       >
                         Visit Website
                       </a>
@@ -146,9 +146,9 @@ const Works = () => {
           previousLabel={
             <button
               disabled={currentPage === 0}
-              className={`px-3 py-1 border rounded-md ${
+              className={`px-3 py-1 border rounded-xl ${
                 currentPage === 0
-                  ? "bg-gray-300 text-gray-500 cursor-not-allowed"
+                  ? "bg-gray-300 text-gray-500 cursor-not-allowed "
                   : "bg-gray-200 hover:bg-gray-300"
               }`}
             >
@@ -158,7 +158,7 @@ const Works = () => {
           nextLabel={
             <button
               disabled={currentPage === pageCount - 1}
-              className={`px-3 py-1 border rounded-md ${
+              className={`px-3 py-1 border rounded-md rounded-xl ${
                 currentPage === pageCount - 1
                   ? "bg-black-500 text-gray-500 cursor-not-allowed"
                   : "bg-gray-200 hover:bg-gray-300"
@@ -174,8 +174,8 @@ const Works = () => {
           onPageChange={handlePageClick}
           containerClassName="flex space-x-2"
           breakClassName="px-3 py-1"
-          pageClassName="px-3 py-1 border rounded-md"
-          activeClassName="bg-black text-white"
+          pageClassName="px-3 py-1 border rounded-xl"
+          activeClassName="bg-black rounded-xl text-white"
         />
       </div>
     </div>
