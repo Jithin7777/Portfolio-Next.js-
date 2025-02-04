@@ -17,7 +17,7 @@ const Slider = dynamic(() => import("react-slick"), { ssr: false });
 
 const Works = () => {
   const workSectionRef = useRef(null); 
-  const itemsPerPage = 3; 
+  const itemsPerPage = 4; 
   const [currentPage, setCurrentPage] = useState(0);
   const [selectedWork, setSelectedWork] = useState(null); 
 
@@ -52,7 +52,7 @@ const Works = () => {
         expertise in full stack development.
       </p>
 
-      <div className="mt-10 grid grid-cols-1  sm:grid-cols-3 lg:grid-cols-4 xl:grid-cols-3 gap-6 px-5 lg:px-28">
+      <div className="mt-10 grid grid-cols-1  sm:grid-cols-3 lg:grid-cols-4 xl:grid-cols-4 gap-6 px-5 lg:px-10">
         {currentItems.map((work, index) => (
           <div
             key={index}

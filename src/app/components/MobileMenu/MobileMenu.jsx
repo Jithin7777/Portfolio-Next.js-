@@ -69,7 +69,7 @@ const MobileMenu = ({ closeMenu, menuRef, isMenuOpen }) => {
             className="block py-4 px-6 text-lg font-medium text-gray-800 hover:bg-gray-100 rounded-md transition duration-300 flex items-center gap-3"
           >
             <FolderIcon className="text-gray-600 w-5 h-5" />
-            My Work
+            My Works
           </a>
         </li>
         <li>
