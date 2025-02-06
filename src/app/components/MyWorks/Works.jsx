@@ -56,8 +56,8 @@ const Works = () => {
         {currentItems.map((work, index) => (
           <div
             key={index}
-            className="bg-white shadow-lg rounded-xl  overflow-hidden justify-center"
-          >
+            className="bg-gray-50 hover:shadow-2xl transition-shadow rounded-xl overflow-hidden justify-center"
+            >
             <div className="">
               {/* Carousel component inside card */}
               <Slider {...settings}>
