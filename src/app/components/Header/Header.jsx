@@ -15,7 +15,7 @@ const Header = () => {
       </div>
 
       {/* Greetings */}
-      <h3 className="flex font-Ovo  text-2xl sm:text-xl  gap-2 items-center  md:text-3xl justify-center pt-6 sm:pt-10 text-center">
+      <h3 className="flex font-Ovo  text-xl sm:text-xl  gap-2 items-center  md:text-3xl justify-center pt-6 sm:pt-10 text-center">
         Hi, I'm Jithin Jose
         <Image src={assets.hand_icon} alt="Hand Icon" className="w-5 sm:w-6" />
       </h3>
