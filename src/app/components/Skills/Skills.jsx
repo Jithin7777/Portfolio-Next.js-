@@ -15,11 +15,11 @@ const Skills = () => {
   };
 
   return (
-    <div className="py-14 bg-gray-100" id="skill">
+    <div className="py-14 " id="skill">
       <h2 className="font-Ovo text-center text-3xl sm:text-4xl md:text-5xl  tracking-wide">
         My Skills
       </h2>
-      <p className="text-center text-gray-600 text-sm sm:text-lg mt-3">
+      <p className="text-center font-Ovo text-sm sm:text-lg mt-3">
         Technologies I have experience with.
       </p>
 

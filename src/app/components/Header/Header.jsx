@@ -15,7 +15,7 @@ const Header = () => {
       </div>
 
       {/* Greetings */}
-      <h3 className="flex font-Ovo gap-2 items-center text-lg sm:text-2xl md:text-xl justify-center pt-6 sm:pt-10 text-center">
+      <h3 className="flex font-Ovo  text-2xl sm:text-xl  gap-2 items-center  md:text-3xl justify-center pt-6 sm:pt-10 text-center">
         Hi, I'm Jithin Jose
         <Image src={assets.hand_icon} alt="Hand Icon" className="w-5 sm:w-6" />
       </h3>
@@ -31,7 +31,7 @@ const Header = () => {
       </motion.h1>
 
       {/* Description */}
-      <p className="max-w-2xl font-Ovo text-sm sm:text-base lg:text-lg text-center mx-auto mt-4">
+      <p className="max-w-2xl font-Ovo text-sm sm:text-base lg:text-lg font-medium text-center mx-auto mt-4 ">
         I am a full stack developer from Alappuzha, Kerala with 1 year of
         experience in companies like Luminar Technolab and Luminar Technohub.
       </p>
@@ -40,7 +40,7 @@ const Header = () => {
       <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mt-8">
         <a
           href="#contact"
-          className="flex items-center bg-black border border-gray-500 px-6 sm:px-10 py-2 sm:py-3 rounded-full text-white gap-2 text-sm sm:text-base hover:bg-gray-100 transition"
+          className="flex items-center bg-black border border-gray-500 px-6 sm:px-10 py-2 sm:py-3 rounded-full text-white gap-2 text-sm sm:text-base hover:bg-slate-950 transition"
         >
           Contact Me
           <Image

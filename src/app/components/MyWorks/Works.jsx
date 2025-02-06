@@ -85,7 +85,7 @@ const Works = () => {
               </Slider>
             </div>
             <div className="p-4 mt-3">
-              <h3 className="text-base sm:text-lg md:text-xl font-Ovo">
+              <h3 className=" font-medium text-gray-800 text-lg sm:text-xl">
                 {work.title
                   .split(" ")
                   .map(
@@ -120,7 +120,7 @@ const Works = () => {
                       alt={selectedWork?.title}
                       className="mt-4  w-full h-48 object-cover rounded-md"
                     />
-                    <p className="mt-5">{selectedWork?.description}</p>
+                    <p className="mt-5 text-lg sm:text-xl font-medium ">{selectedWork?.description}</p>
                     {/* Button to visit the website */}
                     {selectedWork?.url && (
                       <a
