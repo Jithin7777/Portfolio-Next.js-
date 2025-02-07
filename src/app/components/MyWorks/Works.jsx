@@ -118,7 +118,7 @@ const Works = () => {
                     <img
                       src={selectedWork?.bgImage}
                       alt={selectedWork?.title}
-                      className="mt-4  w-full h-48 object-cover rounded-md"
+                      className="mt-4  w-full h-48 object-cover rounded-xl"
                     />
                     <p className="mt-5 text-lg sm:text-xl font-medium ">{selectedWork?.description}</p>
                     {/* Button to visit the website */}
