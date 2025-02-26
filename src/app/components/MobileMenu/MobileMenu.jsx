@@ -36,12 +36,23 @@ const MobileMenu = ({ closeMenu, menuRef, isMenuOpen }) => {
         </div>
 
         {/* Menu Header */}
-        <div className="text-center mt-20 mb-8">
+        <div className="text-center mt-14 mb-8">
 
         </div>
 
         {/* Menu Items */}
         <li>
+      
+        <div className="flex justify-center   ">
+  <Image
+    src={assets.profile_img}
+    alt="Profile Image"
+    className="w-24 h-24 rounded-full border-4 mb-1 border-gray-100 shadow-md"
+    onClick={closeMenu}
+  />
+</div>
+   
+
           <a
             onClick={closeMenu}
             href="#top"
