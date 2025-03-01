@@ -30,7 +30,7 @@ const MobileMenu = ({ closeMenu, menuRef, isMenuOpen }) => {
           <Image
             src={assets.close_black}
             alt="Close Menu"
-            className="w-6 h-6 cursor-pointer"
+            className="w-6 h-6 cursor-pointer rounded-full object-cover"
             onClick={closeMenu}
           />
         </div>
@@ -47,7 +47,7 @@ const MobileMenu = ({ closeMenu, menuRef, isMenuOpen }) => {
   <Image
     src={assets.profile_img}
     alt="Profile Image"
-    className="w-24 h-24 rounded-full border-4 mb-1 border-gray-100 shadow-md"
+    className="w-24 h-24 rounded-full border-4 mb-1 border-gray-100 shadow-md object-cover"
     onClick={closeMenu}
   />
 </div>
