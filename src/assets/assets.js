@@ -248,6 +248,10 @@ export const skillsData = [
     name: "JavaScript",
     logo: "/javascript-1.svg", 
   },
+   {
+    name: "TypeScript",
+    logo: "/typescript-logo.svg", 
+  },
   {
     name: "Bootstrap",
     logo: "/bootstrap-5-1.svg", },
@@ -288,12 +292,20 @@ export const skillsData = [
     logo: "/github-icon-1.svg", 
   },
   {
+    name: "ShadcnUI",
+    logo: "/shadcn-ui.svg", 
+  },
+  {
     name: "Docker",
     logo: "/docker-4.svg", 
   },
   {
     name: "Vercel",
     logo: "/vercel.svg", 
+  },
+   {
+    name: "Netlify",
+    logo: "/netlify.svg", 
   },
   {
     name: "Postman",

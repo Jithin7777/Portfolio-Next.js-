@@ -1,17 +1,17 @@
-'use client';
-import React, { useState, useEffect } from 'react';
-import Navbar from './components/Navbar/Navbar';
-import Header from './components/Header/Header';
-import Works from './components/MyWorks/Works';
-import 'slick-carousel/slick/slick.css'; 
-import 'slick-carousel/slick/slick-theme.css'; 
-import Contact from './components/Contact/Contact';
-import Skills from './components/Skills/Skills';
-import Footer from './components/Footer/Footer';
-import { FaArrowDown, FaArrowUp } from 'react-icons/fa';
+"use client";
+import React, { useState, useEffect } from "react";
+import Navbar from "./components/Navbar/Navbar";
+import Header from "./components/Header/Header";
+import Works from "./components/MyWorks/Works";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
+import Contact from "./components/Contact/Contact";
+import Skills from "./components/Skills/Skills";
+import Footer from "./components/Footer/Footer";
+import { FaArrowDown, FaArrowUp } from "react-icons/fa";
 
 const Page = () => {
-  const [scrollToBottom, setScrollToBottom] = useState(true); 
+  const [scrollToBottom, setScrollToBottom] = useState(true);
 
   // Handle scroll position within useEffect
   useEffect(() => {
@@ -21,30 +21,29 @@ const Page = () => {
       const clientHeight = document.documentElement.clientHeight;
 
       if (scrollPosition < 100) {
-        setScrollToBottom(true); 
-      }
-      else if (scrollPosition + clientHeight >= scrollHeight - 100) {
+        setScrollToBottom(true);
+      } else if (scrollPosition + clientHeight >= scrollHeight - 100) {
         setScrollToBottom(false);
       }
     };
 
-    window.addEventListener('scroll', handleScroll); 
+    window.addEventListener("scroll", handleScroll);
 
     return () => {
-      window.removeEventListener('scroll', handleScroll); 
+      window.removeEventListener("scroll", handleScroll);
     };
   }, []);
 
   // Scroll to top function
   const scrollToTop = () => {
-    window.scrollTo({ top: 0, behavior: 'smooth' });
+    window.scrollTo({ top: 0, behavior: "smooth" });
   };
 
   // Scroll to bottom function
   const scrollToBottomAction = () => {
     window.scrollTo({
       top: document.documentElement.scrollHeight,
-      behavior: 'smooth',
+      behavior: "smooth",
     });
   };
 
@@ -53,10 +52,10 @@ const Page = () => {
       <Navbar />
       <Header />
       <Works />
-      <Skills/>
+      <Skills />
 
       <Contact />
-   <Footer/>
+      <Footer />
       {/* Single Button for both Scroll To Top/Bottom */}
       <button
         onClick={scrollToBottom ? scrollToBottomAction : scrollToTop}
