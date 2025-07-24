@@ -78,6 +78,15 @@ export const assets = {
 
 export const workData = [
   {
+    title: "Layla-web",
+    // description:
+    //   "I created this MERN stack-based food delivery app using React Bootstrap, Tailwind CSS, HTML, and CSS for the frontend. The app uses Context API for state management, integrates Twilio and Nodemailer for user authentication and notifications, and Stripe for payment processing. The admin page allows easy management of orders and food items.",
+    bgImage: "/layla1.png",
+    bgImage1: "/layla2.png",
+    bgImage2: "/layla3.png",
+    url: "https://restaurant-app-testing.vercel.app/",
+  },
+  {
     title: "Bitebox",
     description:
       "I created this MERN stack-based food delivery app using React Bootstrap, Tailwind CSS, HTML, and CSS for the frontend. The app uses Context API for state management, integrates Twilio and Nodemailer for user authentication and notifications, and Stripe for payment processing. The admin page allows easy management of orders and food items.",
@@ -140,20 +149,20 @@ export const workData = [
   {
     title: "StaffSphere",
     description:
-"I developed StaffSphere, an Employee Management App with full CRUD functionality, built using Angular, JSON Server, Angular Material, and Bootstrap 5. The app features an intuitive admin login, seamless employee data management, search, and filter capabilities, ensuring efficient and user-friendly operations.",    bgImage: "/work-15.png",
+      "I developed StaffSphere, an Employee Management App with full CRUD functionality, built using Angular, JSON Server, Angular Material, and Bootstrap 5. The app features an intuitive admin login, seamless employee data management, search, and filter capabilities, ensuring efficient and user-friendly operations.",
+    bgImage: "/work-15.png",
     bgImage1: "/work-15(1).png",
     bgImage2: "/work-15.png",
     bgImage1: "/work-15(1).png",
-
   },
   {
     title: "Uber mobile app",
     description:
-"I developed an Uber Mobile App Clone, focusing on the main four pages of the Uber mobile application. Built using React and React Bootstrap, this project replicates the mobile app interface, not the website design, ensuring a responsive and user-friendly experience.",    bgImage: "/uber.png",
+      "I developed an Uber Mobile App Clone, focusing on the main four pages of the Uber mobile application. Built using React and React Bootstrap, this project replicates the mobile app interface, not the website design, ensuring a responsive and user-friendly experience.",
+    bgImage: "/uber.png",
     bgImage1: "/work-16(1).png",
     bgImage2: "/uber.png",
     url: "https://ubermobileclone.netlify.app/",
-
   },
   {
     title: "taste harmony",
@@ -238,42 +247,43 @@ export const toolsData = [
 export const skillsData = [
   {
     name: "HTML",
-    logo: "/html-1.svg", 
+    logo: "/html-1.svg",
   },
   {
     name: "CSS",
-    logo: "/css-3.svg", 
+    logo: "/css-3.svg",
   },
   {
     name: "JavaScript",
-    logo: "/javascript-1.svg", 
+    logo: "/javascript-1.svg",
   },
-   {
+  {
     name: "TypeScript",
-    logo: "/typescript-logo.svg", 
+    logo: "/typescript-logo.svg",
   },
   {
     name: "Bootstrap",
-    logo: "/bootstrap-5-1.svg", },
+    logo: "/bootstrap-5-1.svg",
+  },
   {
     name: "Tailwind CSS",
-    logo: "/tailwindcss.svg", 
+    logo: "/tailwindcss.svg",
   },
   {
     name: "React",
-    logo: "/react-2.svg", 
+    logo: "/react-2.svg",
   },
   {
     name: "Next.js",
-    logo: "/next.svg", 
+    logo: "/next.svg",
   },
   {
     name: "Redux",
-    logo: "/redux.svg", 
+    logo: "/redux.svg",
   },
   {
     name: "Angular",
-    logo: "/angular-icon.svg", 
+    logo: "/angular-icon.svg",
   },
   {
     name: "Node.js",
@@ -281,34 +291,34 @@ export const skillsData = [
   },
   {
     name: "MongoDB",
-    logo: "/mongodb-icon-1.svg", 
+    logo: "/mongodb-icon-1.svg",
   },
   {
     name: "PostgreSQL",
-    logo: "/postgresql.svg", 
+    logo: "/postgresql.svg",
   },
   {
     name: "GitHub",
-    logo: "/github-icon-1.svg", 
+    logo: "/github-icon-1.svg",
   },
   {
     name: "ShadcnUI",
-    logo: "/shadcn-ui.svg", 
+    logo: "/shadcn-ui.svg",
   },
   {
     name: "Docker",
-    logo: "/docker-4.svg", 
+    logo: "/docker-4.svg",
   },
   {
     name: "Vercel",
-    logo: "/vercel.svg", 
+    logo: "/vercel.svg",
   },
-   {
+  {
     name: "Netlify",
-    logo: "/netlify.svg", 
+    logo: "/netlify.svg",
   },
   {
     name: "Postman",
-    logo: "/postman.svg", 
+    logo: "/postman.svg",
   },
 ];
