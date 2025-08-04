@@ -32,7 +32,7 @@ const Header = () => {
 
       {/* Description */}
       <p className="max-w-2xl font-Ovo text-sm sm:text-base lg:text-lg font-medium text-center mx-auto mt-4 ">
-        I am a full stack developer from Alappuzha, Kerala with 1 year of
+        I am a full stack developer from Alappuzha, Kerala with 1.5 year of
         experience in companies like <b>Foodo AI</b> and <b>Luminar Technohub</b>.
       </p>
 
