@@ -43,7 +43,7 @@ const Works = () => {
   };
 
   return (
-    <div ref={workSectionRef} id="work" className="w-full py-8 bg-gray-50">
+    <div ref={workSectionRef} id="work" className="w-full py-8 bg-gray-50 ">
       <h2 className="font-Ovo text-center text-2xl sm:text-xl md:text-3xl lg:text-5xl">
         My Works
       </h2>
