@@ -3,10 +3,10 @@
 import dynamic from "next/dynamic";
 import React, { useRef, useState } from "react";
 import ReactPaginate from "react-paginate";
+import { motion, useScroll, useTransform } from "framer-motion";
 import {
   Dialog,
   DialogContent,
-  DialogDescription,
   DialogHeader,
   DialogTitle,
   DialogTrigger,
@@ -15,11 +15,36 @@ import { workData } from "@/assets/assets";
 
 const Slider = dynamic(() => import("react-slick"), { ssr: false });
 
-const Works = () => {
-  const workSectionRef = useRef(null); 
-  const itemsPerPage = 4; 
+function AnimatedChar({ char, index, totalChars, scrollYProgress }) {
+  const start = index / totalChars;
+  const end = (index + 1) / totalChars;
+
+  const charProgress = useTransform(scrollYProgress, [start, end], [0, 1]);
+  const color = useTransform(charProgress, [0, 1], ["#4b4a4a", "#000000"]);
+
+  return (
+    <motion.span style={{ color }} className="inline-block">
+      {char === " " ? "\u00A0" : char}
+    </motion.span>
+  );
+}
+
+export default function Works() {
+  const workSectionRef = useRef(null);
+   const isMobile = typeof window !== "undefined" && window.innerWidth < 768;
+
+  const offsetValues = isMobile
+    ? ["start 2", "end 2"] 
+    : ["start 1", "end 0.9"]; 
+
+  const { scrollYProgress } = useScroll({
+    target: workSectionRef,
+    offset: offsetValues,
+  });
+
+  const itemsPerPage = 4;
   const [currentPage, setCurrentPage] = useState(0);
-  const [selectedWork, setSelectedWork] = useState(null); 
+  const [selectedWork, setSelectedWork] = useState(null);
 
   const settings = {
     dots: true,
@@ -42,50 +67,68 @@ const Works = () => {
     }
   };
 
+  const heading = "My Works";
+  const description =
+    "Welcome to my portfolio! Explore a collection of projects showcasing my expertise in full stack development.";
+
   return (
-    <div ref={workSectionRef} id="work" className="w-full py-8 bg-gray-50 ">
+    <div ref={workSectionRef} id="work" className="w-full py-8 bg-gray-50">
       <h2 className="font-Ovo text-center text-2xl sm:text-xl md:text-3xl lg:text-5xl">
-        My Works
+        {heading.split("").map((char, index) => (
+          <AnimatedChar
+            key={index}
+            char={char}
+            index={index}
+            totalChars={heading.length}
+            scrollYProgress={scrollYProgress}
+          />
+        ))}
       </h2>
-      <p className="font-Ovo text-center max-w-2xl mx-auto mt-5">
-        Welcome to my portfolio! Explore a collection of projects showcasing my
-        expertise in full stack development.
+
+      <p className="font-Ovo text-center max-w-2xl mx-auto mt-5 text-base md:text-lg px-5">
+        {description.split("").map((char, index) => (
+          <AnimatedChar
+            key={index}
+            char={char}
+            index={index}
+            totalChars={description.length}
+            scrollYProgress={scrollYProgress}
+          />
+        ))}
       </p>
 
-      <div className="mt-10 grid grid-cols-1  sm:grid-cols-3 lg:grid-cols-4 xl:grid-cols-4 gap-6 px-5 lg:px-10">
+      <div className="mt-10 grid grid-cols-1 sm:grid-cols-3 lg:grid-cols-4 xl:grid-cols-4 gap-6 px-5 lg:px-10">
         {currentItems.map((work, index) => (
           <div
             key={index}
-            className="bg-gray-50 hover:shadow-2xl transition-shadow rounded-xl overflow-hidden justify-center"
-            >
-            <div className="">
-              {/* Carousel component inside card */}
-              <Slider {...settings}>
-                <div>
-                  <img
-                    src={work.bgImage}
-                    alt={work.title}
-                    className="w-full h-40 sm:h-40 md:h-32 lg:h-48 object-cover filter-none"
-                  />
-                </div>
-                <div>
-                  <img
-                    src={work.bgImage1}
-                    alt={work.title}
-                    className="w-full h-40 sm:h-40 md:h-32 lg:h-48 object-cover "
-                  />
-                </div>
-                <div>
-                  <img
-                    src={work.bgImage2}
-                    alt={work.title}
-                    className="w-full h-40 sm:h-40 md:h-32 lg:h-48 object-cover"
-                  />
-                </div>
-              </Slider>
-            </div>
+            className="bg-gray-50 hover:shadow-2xl transition-shadow rounded-xl overflow-hidden"
+          >
+            <Slider {...settings}>
+              <div>
+                <img
+                  src={work.bgImage}
+                  alt={work.title}
+                  className="w-full h-40 sm:h-40 md:h-32 lg:h-48 object-cover"
+                />
+              </div>
+              <div>
+                <img
+                  src={work.bgImage1}
+                  alt={work.title}
+                  className="w-full h-40 sm:h-40 md:h-32 lg:h-48 object-cover"
+                />
+              </div>
+              <div>
+                <img
+                  src={work.bgImage2}
+                  alt={work.title}
+                  className="w-full h-40 sm:h-40 md:h-32 lg:h-48 object-cover"
+                />
+              </div>
+            </Slider>
+
             <div className="p-4 mt-3">
-              <h3 className=" font-medium text-gray-800 text-lg sm:text-xl">
+              <h3 className="font-medium text-gray-800 text-lg sm:text-xl">
                 {work.title
                   .split(" ")
                   .map(
@@ -94,40 +137,44 @@ const Works = () => {
                   )
                   .join(" ")}
               </h3>
-              {/* <p className="mt-2 text-sm sm:text-base text-gray-700">{work.description}</p> */}
 
-              {/* Dialog Trigger Button */}
-              <Dialog className="!rounded-xl">
+              <Dialog>
                 <DialogTrigger asChild>
                   <button
                     onClick={() => setSelectedWork(work)}
-                    className="mt-3 px-4  px-10 py-2 bg-black text-white rounded-xl hover:bg-gray-800 
-             text-sm sm:text-base md:text-lg  w-full sm:w-auto mx-auto"
+                    className="mt-3 px-4 py-2 bg-black text-white rounded-xl hover:bg-gray-800 w-full sm:w-auto"
                   >
                     View Details
                   </button>
                 </DialogTrigger>
-                {/* Dialog Content */}
-                <DialogContent className='bg-white !rounded-xl '>
+                <DialogContent className="bg-white !rounded-xl">
                   <DialogHeader>
-                    <DialogTitle className="">
-                      {selectedWork?.title.split(" ").map((word)=>word.charAt(0).toUpperCase() + word.slice(1).toLowerCase()).join(' ')}
+                    <DialogTitle>
+                      {selectedWork?.title
+                        .split(" ")
+                        .map(
+                          (word) =>
+                            word.charAt(0).toUpperCase() +
+                            word.slice(1).toLowerCase()
+                        )
+                        .join(" ")}
                     </DialogTitle>
                   </DialogHeader>
-                  <div className="">
+                  <div>
                     <img
                       src={selectedWork?.bgImage}
                       alt={selectedWork?.title}
-                      className="mt-4  w-full h-48 object-cover rounded-xl"
+                      className="mt-4 w-full h-48 object-cover rounded-xl"
                     />
-                    <p className="mt-5 text-lg sm:text-xl font-medium ">{selectedWork?.description}</p>
-                    {/* Button to visit the website */}
+                    <p className="mt-5 text-lg sm:text-xl font-medium">
+                      {selectedWork?.description}
+                    </p>
                     {selectedWork?.url && (
                       <a
                         href={selectedWork.url}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="mt-5 rounded-xl inline-block px-4 py-2 bg-black text-white text-center rounded-md hover:bg-black"
+                        className="mt-5 inline-block px-4 py-2 bg-black text-white rounded-xl hover:bg-gray-900"
                       >
                         Visit Website
                       </a>
@@ -148,7 +195,7 @@ const Works = () => {
               disabled={currentPage === 0}
               className={`px-3 py-1 border rounded-xl ${
                 currentPage === 0
-                  ? "bg-gray-300 text-gray-500 cursor-not-allowed "
+                  ? "bg-gray-300 text-gray-500 cursor-not-allowed"
                   : "bg-gray-200 hover:bg-gray-300"
               }`}
             >
@@ -158,9 +205,9 @@ const Works = () => {
           nextLabel={
             <button
               disabled={currentPage === pageCount - 1}
-              className={`px-3 py-1 border rounded-md rounded-xl ${
+              className={`px-3 py-1 border rounded-xl ${
                 currentPage === pageCount - 1
-                  ? "bg-black-500 text-gray-500 cursor-not-allowed"
+                  ? "bg-gray-300 text-gray-500 cursor-not-allowed"
                   : "bg-gray-200 hover:bg-gray-300"
               }`}
             >
@@ -180,6 +227,4 @@ const Works = () => {
       </div>
     </div>
   );
-};
-
-export default Works;
+}
