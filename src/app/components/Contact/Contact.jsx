@@ -33,7 +33,7 @@ const Contact = () => {
 
 
   return (
-    <div id="contact" className=" bg-gray-50 ">
+    <div id="contact" className="py-12 bg-gray-50 ">
       {/* Heading Section */}
       <h4 className="text-center text-sm font-medium text-gray-600">Connect with me</h4>
       <h2 className="font-Ovo text-center text-2xl sm:text-xl md:text-3xl lg:text-5xl text-gray-800 mt-2">
