@@ -34,8 +34,8 @@ export default function Works() {
    const isMobile = typeof window !== "undefined" && window.innerWidth < 768;
 
   const offsetValues = isMobile
-    ? ["start 2", "end 2"] 
-    : ["start 1", "end 0.9"]; 
+    ? ["start 1", "end 2"] 
+    : ["start 1", "end 0.8"]; 
 
   const { scrollYProgress } = useScroll({
     target: workSectionRef,
@@ -85,7 +85,7 @@ export default function Works() {
         ))}
       </h2>
 
-      <p className="font-Ovo text-center max-w-2xl mx-auto mt-5 text-base md:text-lg px-5">
+      <p className="font-Ovo text-center max-w-2xl mx-auto mt-5 text-lg font-bold md:text-2xl px-5 md:px-7">
         {description.split("").map((char, index) => (
           <AnimatedChar
             key={index}
