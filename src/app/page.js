@@ -1,5 +1,5 @@
 "use client";
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import Navbar from "./components/Navbar/Navbar";
 import Header from "./components/Header/Header";
 import Works from "./components/MyWorks/Works";
@@ -9,11 +9,12 @@ import Contact from "./components/Contact/Contact";
 import Skills from "./components/Skills/Skills";
 import Footer from "./components/Footer/Footer";
 import { FaArrowDown, FaArrowUp } from "react-icons/fa";
+import { ReactLenis } from "lenis/react";
 
 const Page = () => {
   const [scrollToBottom, setScrollToBottom] = useState(true);
+  const lenisRef = useRef(null);
 
-  // Handle scroll position within useEffect
   useEffect(() => {
     const handleScroll = () => {
       const scrollPosition = window.scrollY;
@@ -28,42 +29,40 @@ const Page = () => {
     };
 
     window.addEventListener("scroll", handleScroll);
-
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
+    return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  // Scroll to top function
+  // Scroll to top using Lenis
   const scrollToTop = () => {
-    window.scrollTo({ top: 0, behavior: "smooth" });
+    lenisRef.current?.scrollTo(0, { duration: 1.2 });
   };
 
-  // Scroll to bottom function
+  // Scroll to bottom using Lenis
   const scrollToBottomAction = () => {
-    window.scrollTo({
-      top: document.documentElement.scrollHeight,
-      behavior: "smooth",
-    });
+    lenisRef.current?.scrollTo(document.documentElement.scrollHeight, { duration: 1.2 });
   };
 
   return (
-    <>
+    <ReactLenis root ref={lenisRef} 
+      options={{
+        lerp: 0.05,
+        smoothWheel: true,
+      }}>
       <Navbar />
       <Header />
       <Works />
       <Skills />
-
       <Contact />
       <Footer />
-      {/* Single Button for both Scroll To Top/Bottom */}
+
+      {/* Single Scroll Button */}
       <button
         onClick={scrollToBottom ? scrollToBottomAction : scrollToTop}
         className="fixed bottom-20 right-4 bg-black text-white p-3 rounded-full hover:bg-black transition"
       >
         {scrollToBottom ? <FaArrowDown size={24} /> : <FaArrowUp size={24} />}
       </button>
-    </>
+    </ReactLenis>
   );
 };
 
