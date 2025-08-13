@@ -34,7 +34,7 @@ export default function Works() {
    const isMobile = typeof window !== "undefined" && window.innerWidth < 768;
 
   const offsetValues = isMobile
-    ? ["start 1", "end 2"] 
+    ? ["start 2", "end 2.1"] 
     : ["start 1", "end 0.8"]; 
 
   const { scrollYProgress } = useScroll({
@@ -69,10 +69,10 @@ export default function Works() {
 
   const heading = "My Works";
   const description =
-    "Welcome to my portfolio! Explore a collection of projects showcasing my expertise in full stack development.";
+    "Welcome to my portfolio!  Explore a collection of projects showcasing my expertise in full stack development.";
 
   return (
-    <div ref={workSectionRef} id="work" className="w-full py-8 bg-gray-50">
+    <div ref={workSectionRef} id="work" className="w-full py-24 bg-gray-50 relative">
       <h2 className="font-Ovo text-center text-2xl sm:text-xl md:text-3xl lg:text-5xl">
         {heading.split("").map((char, index) => (
           <AnimatedChar
@@ -85,7 +85,7 @@ export default function Works() {
         ))}
       </h2>
 
-      <p className="font-Ovo text-center max-w-2xl mx-auto mt-5 text-lg font-bold md:text-2xl px-5 md:px-7">
+      <p className="font-Ovo text-center max-w-4xl mx-auto mt-5 text-sm  font-bold  md:text-2xl  md:px-5">
         {description.split("").map((char, index) => (
           <AnimatedChar
             key={index}

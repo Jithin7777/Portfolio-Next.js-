@@ -1,6 +1,6 @@
-import { assets } from '@/assets/assets';
-import { motion } from 'framer-motion';
-import Image from 'next/image';
+import { assets } from "@/assets/assets";
+import { motion } from "framer-motion";
+import Image from "next/image";
 
 const Header = () => {
   return (
@@ -25,7 +25,7 @@ const Header = () => {
         className="font-Ovo text-2xl sm:text-4xl lg:text-6xl xl:text-[66px] text-center leading-snug mt-4"
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.8, ease: 'easeInOut' }}
+        transition={{ duration: 0.8, ease: "easeInOut" }}
       >
         Full Stack Developer based in Kerala
       </motion.h1>
@@ -33,7 +33,8 @@ const Header = () => {
       {/* Description */}
       <p className="max-w-2xl font-Ovo text-sm sm:text-base lg:text-lg font-medium text-center mx-auto mt-4 ">
         I am a full stack developer from Alappuzha, Kerala with 1.5 years of
-        experience in companies like <b>Foodo AI</b> and <b>Luminar Technohub</b>.
+        experience in companies like <b>Foodo AI</b> and{" "}
+        <b>Luminar Technohub</b>.
       </p>
 
       {/* Buttons */}
@@ -55,7 +56,11 @@ const Header = () => {
           className="flex items-center border border-gray-500 px-6 sm:px-10 py-2 sm:py-3 rounded-full gap-2 text-sm sm:text-base hover:bg-gray-100 transition"
         >
           Resume
-          <Image alt="Download Icon" src={assets.download_icon} className="w-4" />
+          <Image
+            alt="Download Icon"
+            src={assets.download_icon}
+            className="w-4"
+          />
         </a>
       </div>
     </div>
