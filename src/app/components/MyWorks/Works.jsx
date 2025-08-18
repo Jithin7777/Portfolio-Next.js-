@@ -72,7 +72,7 @@ export default function Works() {
     "Welcome to my portfolio!  Explore a collection of projects showcasing my expertise in full stack development.";
 
   return (
-    <div ref={workSectionRef} id="work" className="w-full py-24 bg-gray-50 relative">
+    <div ref={workSectionRef} id="work" className="w-full py-10 md:py-24 bg-gray-50 relative">
       <h2 className="font-Ovo text-center text-2xl sm:text-xl md:text-3xl lg:text-5xl">
         {heading.split("").map((char, index) => (
           <AnimatedChar
