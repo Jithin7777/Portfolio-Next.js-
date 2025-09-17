@@ -85,7 +85,7 @@ export const workData = [
     bgImage1: "/work-18.png",
     bgImage2: "/work-17.png",
 
-    url: "https://customizable-dashboard-nextjs.vercel.app/",
+    url: "https://online-marketplace-dashboard.vercel.app/",
   },
 
   {
