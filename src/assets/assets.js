@@ -78,9 +78,20 @@ export const assets = {
 
 export const workData = [
   {
+    title: "Online MarketPlace Dashboard",
+    description:
+      "Manage products with ease—paginated table, sorting, and category/status filters—built using Next.js, TypeScript, Tailwind CSS, FS module, and shadcn/ui.",
+    bgImage: "/work-17.png",
+    bgImage1: "/work-18.png",
+    bgImage2: "/work-17.png",
+
+    url: "https://customizable-dashboard-nextjs.vercel.app/",
+  },
+
+  {
     title: "Layla-web",
-    // description:
-    //   "I created this MERN stack-based food delivery app using React Bootstrap, Tailwind CSS, HTML, and CSS for the frontend. The app uses Context API for state management, integrates Twilio and Nodemailer for user authentication and notifications, and Stripe for payment processing. The admin page allows easy management of orders and food items.",
+    description:
+      "UK-based restaurant site with integrated online ordering flow, built using Next.js, TypeScript, Context API, Tailwind CSS, and shadcn/ui.",
     bgImage: "/layla1.png",
     bgImage1: "/layla2.png",
     bgImage2: "/layla3.png",
