@@ -1,15 +1,21 @@
-import { assets } from '@/assets/assets';
-import Image from 'next/image';
-import React from 'react';
+import { assets } from "@/assets/assets";
+import Image from "next/image";
+import React from "react";
 
 // Correct import for Heroicons
-import { HomeIcon, UserIcon, BriefcaseIcon, FolderIcon, PhoneIcon } from '@heroicons/react/24/solid';
+import {
+  HomeIcon,
+  UserIcon,
+  BriefcaseIcon,
+  FolderIcon,
+  PhoneIcon,
+} from "@heroicons/react/24/solid";
 
 const MobileMenu = ({ closeMenu, menuRef, isMenuOpen }) => {
   return (
     <div
       className={`fixed inset-0  z-50 md:hidden transition-all duration-500 ${
-        isMenuOpen ? 'opacity-100 visible' : 'opacity-0 invisible'
+        isMenuOpen ? "opacity-100 visible" : "opacity-0 invisible"
       }`}
     >
       {/* Dark Overlay */}
@@ -21,8 +27,8 @@ const MobileMenu = ({ closeMenu, menuRef, isMenuOpen }) => {
       {/* Sidebar Menu */}
       <ul
         ref={menuRef}
-        className={`absolute left-0 top-0 w-60 h-full bg-white shadow-lg rounded-r-lg transform transition-transform duration-500 ${
-          isMenuOpen ? 'translate-x-0' : '-translate-x-full'
+        className={`absolute left-0 top-0 w-72 h-full bg-white shadow-lg rounded-r-lg transform transition-transform duration-500 ${
+          isMenuOpen ? "translate-x-0" : "-translate-x-full"
         }`}
       >
         {/* Close Button */}
@@ -36,22 +42,18 @@ const MobileMenu = ({ closeMenu, menuRef, isMenuOpen }) => {
         </div>
 
         {/* Menu Header */}
-        <div className="text-center mt-14 mb-8">
-
-        </div>
+        <div className="text-center mt-14 mb-8"></div>
 
         {/* Menu Items */}
         <li>
-      
-        <div className="flex justify-center   ">
-  <Image
-    src={assets.profile_img}
-    alt="Profile Image"
-    className="w-24 h-24 rounded-full border-4 mb-1 border-gray-100 shadow-md object-cover"
-    onClick={closeMenu}
-  />
-</div>
-   
+          <div className="flex justify-center   ">
+            <Image
+              src={assets.profile_img}
+              alt="Profile Image"
+              className="w-28 h-28 rounded-full border-4 mb-1 border-gray-100 shadow-md object-cover"
+              onClick={closeMenu}
+            />
+          </div>
 
           <a
             onClick={closeMenu}
@@ -72,7 +74,7 @@ const MobileMenu = ({ closeMenu, menuRef, isMenuOpen }) => {
             About Me
           </a>
         </li> */}
-        
+
         <li>
           <a
             onClick={closeMenu}
@@ -90,7 +92,7 @@ const MobileMenu = ({ closeMenu, menuRef, isMenuOpen }) => {
             className="block py-4 px-6 text-lg font-medium text-gray-800 hover:bg-gray-100 rounded-md transition duration-300 flex items-center gap-3"
           >
             <BriefcaseIcon className="text-gray-600 w-5 h-5" />
-          Skills
+            Skills
           </a>
         </li>
         <li>
