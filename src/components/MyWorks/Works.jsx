@@ -305,43 +305,43 @@ export default function Works() {
       </div>
 
       {/* Pagination */}
-      <div className="mt-6 flex justify-center">
-        <ReactPaginate
-          previousLabel={
-            <button
-              disabled={currentPage === 0}
-              className={`px-3 py-1 border rounded-xl ${
-                currentPage === 0
-                  ? "bg-gray-300 text-gray-500 cursor-not-allowed"
-                  : "bg-gray-200 hover:bg-gray-300"
-              }`}
-            >
-              ← Previous
-            </button>
-          }
-          nextLabel={
-            <button
-              disabled={currentPage === pageCount - 1}
-              className={`px-3 py-1 border rounded-xl ${
-                currentPage === pageCount - 1
-                  ? "bg-gray-300 text-gray-500 cursor-not-allowed"
-                  : "bg-gray-200 hover:bg-gray-300"
-              }`}
-            >
-              Next →
-            </button>
-          }
-          breakLabel={"..."}
-          pageCount={pageCount}
-          marginPagesDisplayed={2}
-          pageRangeDisplayed={3}
-          onPageChange={handlePageClick}
-          containerClassName="flex space-x-2"
-          breakClassName="px-3 py-1"
-          pageClassName="px-3 py-1 border rounded-xl"
-          activeClassName="bg-black rounded-xl text-white"
-        />
-      </div>
+<div className="mt-6 flex justify-center">
+  <ReactPaginate
+    previousLabel={
+      <button
+        disabled={currentPage === 0}
+        className={`px-2 sm:px-3 py-1 border rounded text-sm sm:text-sm  ${
+          currentPage === 0
+            ? "bg-gray-300 text-gray-500 cursor-not-allowed"
+            : "bg-gray-200 hover:bg-gray-300"
+        }`}
+      >
+        ← Prev
+      </button>
+    }
+    nextLabel={
+      <button
+        disabled={currentPage === pageCount - 1}
+        className={`px-2 sm:px-3 py-1 border rounded text-sm sm:text-sm ${
+          currentPage === pageCount - 1
+            ? "bg-gray-300 text-gray-500 cursor-not-allowed"
+            : "bg-gray-200 hover:bg-gray-300"
+        }`}
+      >
+        Next →
+      </button>
+    }
+    breakLabel={"..."}
+    pageCount={pageCount}
+    marginPagesDisplayed={1}
+    pageRangeDisplayed={2}
+    onPageChange={handlePageClick}
+    containerClassName="flex space-x-2 text-sm sm:text-sm"
+    breakClassName="px-2 py-1"
+    pageClassName="px-2 sm:px-3 py-1 border rounded"
+    activeClassName="bg-black text-white"
+  />
+</div>
     </div>
   );
 }
