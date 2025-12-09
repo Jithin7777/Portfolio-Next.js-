@@ -79,7 +79,7 @@ export default function Works() {
     }
   };
 
-  const heading = "My Works"; 
+  const heading = "My Works";
   const description =
     "Welcome to my portfolio! Explore a collection of projects showcasing my expertise in full stack development.";
 
@@ -91,7 +91,7 @@ export default function Works() {
             <img
               src={work.bgImage}
               alt={work.title}
-              className="w-full h-48 object-cover rounded-xl"
+              className="w-full h-44 object-cover rounded-xl"
             />
           </div>
           {work.bgImage1 && (
@@ -114,9 +114,9 @@ export default function Works() {
           )}
         </Slider>
       </div>
-      <p className="mt-5 text-lg sm:text-xl font-medium">{work.description}</p>
+      <p className="mt-5 text-md sm:text-xl font-medium">{work.description}</p>
       {/* Tech Stack */}
-      <div className="flex flex-wrap gap-2 mt-3 ">
+      <div className="flex flex-wrap gap-2 mt-2 ">
         {work.tech?.map((item, i) => (
           <span
             key={i}
@@ -132,7 +132,7 @@ export default function Works() {
           href={work.url}
           target="_blank"
           rel="noopener noreferrer"
-          className=" inline-block px-4 py-2 bg-black text-white rounded-xl hover:bg-gray-900"
+          className="mt-4 inline-block px-3 py-2 bg-black text-white text-sm rounded-xl hover:bg-gray-900"
         >
           Visit Website
         </a>
@@ -144,7 +144,7 @@ export default function Works() {
     <div
       ref={workSectionRef}
       id="work"
-      className="w-full rounded-t-2xl py-5 md:py-16 bg-gray-50 relative"
+      className="w-full rounded-t-3xl  border-t-8  border-gray-200 py-5 md:py-16 bg-gray-50 relative"
     >
       {/* Heading */}
       <h2 className="font-Ovo  text-center text-2xl sm:text-xl md:text-3xl lg:text-5xl">
@@ -212,10 +212,7 @@ export default function Works() {
               <h3 className="font-medium text-gray-800 text-lg sm:text-xl">
                 {work.title
                   .split(" ")
-                  .map(
-                    (word) =>
-                      word.charAt(0).toUpperCase() + word.slice(1)
-                  )
+                  .map((word) => word.charAt(0).toUpperCase() + word.slice(1))
                   .join(" ")}
               </h3>
 
@@ -230,7 +227,7 @@ export default function Works() {
                       View Details
                     </button>
                   </DrawerTrigger>
-                  <DrawerContent className="bg-white !rounded-t-2xl">
+                  <DrawerContent className="bg-white !rounded-t-2xl ">
                     <DrawerHeader className="flex items-center justify-between">
                       <DrawerTitle>{selectedWork?.title}</DrawerTitle>
                       <DrawerClose asChild>
