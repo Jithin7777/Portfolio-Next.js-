@@ -84,8 +84,8 @@ export const workData = [
     bgImage: "/work-17.png",
     bgImage1: "/work-18.png",
     bgImage2: "/work-17.png",
-
     url: "https://online-marketplace-dashboard.vercel.app/",
+    tech: ["Next.js", "TypeScript", "Tailwind CSS", "ShadcnUI", "Node.js"]
   },
 
   {
@@ -96,105 +96,116 @@ export const workData = [
     bgImage1: "/layla2.png",
     bgImage2: "/layla3.png",
     url: "https://restaurant-app-testing.vercel.app/",
+    tech: ["Next.js", "TypeScript", "Tailwind CSS", "ShadcnUI", "Context API"]
   },
+
   {
     title: "Bitebox",
     description:
-      "I created this MERN stack-based food delivery app using React Bootstrap, Tailwind CSS, HTML, and CSS for the frontend. The app uses Context API for state management, integrates Twilio and Nodemailer for user authentication and notifications, and Stripe for payment processing. The admin page allows easy management of orders and food items.",
+      "Food delivery MERN app with authentication via Twilio & Nodemailer, Stripe payments, and admin management features.",
     bgImage: "/work-13.png",
     bgImage1: "/work-13(1).png",
     bgImage2: "/work-13(2).png",
+    tech: ["React", "Node.js", "MongoDB", "Redux", "Stripe", "Bootstrap", "Tailwind CSS"]
   },
 
   {
     title: "STARBUCKS CLONE",
     description:
-      "I created this site using Bootstrap 5, HTML, and CSS to deliver a responsive and visually appealing design with a focus on clean structure and modern styling.",
+      "Responsive clone site built using Bootstrap 5, HTML, and CSS focusing on modern UI design.",
     bgImage: "/work-7.png",
     bgImage1: "/work-8.png",
     bgImage2: "/work-7.png",
-
     url: "https://jithin7777.github.io/Starbucks_clone/",
+    tech: ["HTML", "CSS", "Bootstrap"]
   },
+
   {
     title: "Customizable Dashboard",
     description:
-      "I created this customizable dashboard using Next.js, Tailwind CSS, ShadCN UI, and Context API. The app allows users to manage widget visibility (show/hide) with a clean and modern design. It also integrates MongoDB for data storage, offering a flexible and dynamic experience.",
+      "Dashboard with widget visibility control using Next.js, Context API, Tailwind CSS, Shadcn UI, and MongoDB storage.",
     bgImage: "/work-14.png",
     bgImage1: "/work-14(1).png",
     bgImage2: "/work-14.png",
-
     url: "https://customizable-dashboard-nextjs.vercel.app/",
+    tech: ["Next.js", "Tailwind CSS", "ShadcnUI", "MongoDB", "Context API"]
   },
 
   {
     title: "Google Gemini App",
     description:
-      "I developed the Google Gemini App using React, React Bootstrap, and the Google Gemini API to create a sleek, responsive, and feature-rich application",
+      "AI app using Google Gemini API with a sleek UI built using React and Bootstrap.",
     bgImage: "/work-5.png",
     bgImage1: "/work-6.png",
     bgImage2: "/work-5.png",
-
     url: "https://geminiclonesite.netlify.app/",
+    tech: ["React", "Bootstrap", "JavaScript", "API Integration"]
   },
+
   {
     title: "Shopsphere",
     description:
-      "I built Shopsphere, an e-commerce website, using React, Redux Toolkit, React Bootstrap, and Fake Store API to deliver a dynamic and responsive shopping experience.",
+      "E-commerce site built using React, Redux Toolkit, Fake Store API & Bootstrap.",
     bgImage: "/work-10.png",
     bgImage1: "/work-10(1).png",
     bgImage2: "/work-10.png",
-
     url: "https://shopsphere1.netlify.app/",
+    tech: ["React", "Redux", "Bootstrap", "API Integration"]
   },
+
   {
     title: "Article sphere",
     description:
-      "I developed Article Sphere, a blog application with full CRUD functionality, built using React, Firebase, and React Bootstrap, enabling seamless content creation, editing, and sharing.",
+      "Blog application with full CRUD using React and Firebase.",
     bgImage: "/work-11.png",
     bgImage1: "/work-11(1).png",
     bgImage2: "/work-11.png",
-
     url: "https://article-sphere-5.netlify.app/",
+    tech: ["React", "Firebase", "Bootstrap"]
   },
+
   {
     title: "StaffSphere",
     description:
-      "I developed StaffSphere, an Employee Management App with full CRUD functionality, built using Angular, JSON Server, Angular Material, and Bootstrap 5. The app features an intuitive admin login, seamless employee data management, search, and filter capabilities, ensuring efficient and user-friendly operations.",
+      "Employee Management app using Angular, JSON Server, Angular Material & Bootstrap.",
     bgImage: "/work-15.png",
     bgImage1: "/work-15(1).png",
     bgImage2: "/work-15.png",
-    bgImage1: "/work-15(1).png",
+    tech: ["Angular", "Bootstrap", "Angular Material", "JSON Server"]
   },
+
   {
     title: "Uber mobile app",
     description:
-      "I developed an Uber Mobile App Clone, focusing on the main four pages of the Uber mobile application. Built using React and React Bootstrap, this project replicates the mobile app interface, not the website design, ensuring a responsive and user-friendly experience.",
+      "Uber mobile UI clone developed using React & Bootstrap.",
     bgImage: "/uber.png",
     bgImage1: "/work-16(1).png",
     bgImage2: "/uber.png",
     url: "https://ubermobileclone.netlify.app/",
+    tech: ["React", "Bootstrap"]
   },
+
   {
     title: "taste harmony",
     description:
-      "I created Taste Harmony, a dynamic restaurant website using React, React Bootstrap, and a Restaurants API, offering interactive and responsive views for users.",
+      "Restaurant website built using React, Bootstrap & Restaurant API.",
     bgImage: "/work-9.png",
     bgImage1: "/work-9(1).png",
     bgImage2: "/work-9.png",
-
     url: "https://restauranttasteharmony.netlify.app/",
+    tech: ["React", "Bootstrap", "API Integration"]
   },
+
   {
     title: "Contact hub",
     description:
-      "A user management application built with React and React Bootstrap, integrated with a Users API to enable dynamic views ",
+      "User management app built using React, Bootstrap, & Users API.",
     bgImage: "/works-12.png",
     bgImage1: "/work-12(1).png",
     bgImage2: "/works-12.png",
-
     url: "https://contacthb.netlify.app/",
-  },
+    tech: ["React", "Bootstrap", "API Integration"]
+  }
 ];
 
 export const serviceData = [

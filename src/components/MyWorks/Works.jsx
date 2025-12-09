@@ -117,6 +117,18 @@ export default function Works() {
         </Slider>
       </div>
       <p className="mt-5 text-lg sm:text-xl font-medium">{work.description}</p>
+      {/* Tech Stack */}
+<div className="flex flex-wrap gap-2 mt-3 ">
+  {work.tech?.map((item, i) => (
+    <span
+      key={i}
+      className="px-2 py-1 text-xs bg-green-200 text-gray-800 rounded"
+    >
+      {item}
+    </span>
+  ))}
+</div>
+
       {work.url && (
         <a
           href={work.url}
