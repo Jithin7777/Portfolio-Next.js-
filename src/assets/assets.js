@@ -78,6 +78,29 @@ export const assets = {
 
 export const workData = [
   {
+    title: "Kube Credential System",
+    description:
+      "Microservice credential issuing & verification system built with Docker, TypeScript, and Node.js. Frontend uses Vite, Tailwind, shadcn, Context API, and is fully tested with Jest & React Testing Library.",
+    bgImage: "/work-20.png",
+    bgImage1: "/work-21.png",
+    bgImage2: "/work-22.png",
+    url: "https://github.com/Jithin7777/Kube-Credential",
+    tech: [
+      "React",
+      "TypeScript",
+      "Vite",
+      "Tailwind CSS",
+      "Shadcn UI",
+      "Context API",
+      "Jest",
+      "React Testing Library",
+      "Node.js",
+      "Express",
+      "Docker",
+      "Microservices",
+    ],
+  },
+  {
     title: "Online MarketPlace Dashboard",
     description:
       "Manage products with ease—paginated table, sorting, and category/status filters—built using Next.js, TypeScript, Tailwind CSS, FS module, and shadcn/ui.",
@@ -85,7 +108,7 @@ export const workData = [
     bgImage1: "/work-18.png",
     bgImage2: "/work-17.png",
     url: "https://online-marketplace-dashboard.vercel.app/",
-    tech: ["Next.js", "TypeScript", "Tailwind CSS", "ShadcnUI", "Node.js"]
+    tech: ["Next.js", "TypeScript", "Tailwind CSS", "ShadcnUI", "Node.js"],
   },
 
   {
@@ -96,7 +119,7 @@ export const workData = [
     bgImage1: "/layla2.png",
     bgImage2: "/layla3.png",
     url: "https://restaurant-app-testing.vercel.app/",
-    tech: ["Next.js", "TypeScript", "Tailwind CSS", "ShadcnUI", "Context API"]
+    tech: ["Next.js", "TypeScript", "Tailwind CSS", "ShadcnUI", "Context API"],
   },
 
   {
@@ -106,7 +129,15 @@ export const workData = [
     bgImage: "/work-13.png",
     bgImage1: "/work-13(1).png",
     bgImage2: "/work-13(2).png",
-    tech: ["React", "Node.js", "MongoDB", "Redux", "Stripe", "Bootstrap", "Tailwind CSS"]
+    tech: [
+      "React",
+      "Node.js",
+      "MongoDB",
+      "Redux",
+      "Stripe",
+      "Bootstrap",
+      "Tailwind CSS",
+    ],
   },
 
   {
@@ -117,7 +148,7 @@ export const workData = [
     bgImage1: "/work-8.png",
     bgImage2: "/work-7.png",
     url: "https://jithin7777.github.io/Starbucks_clone/",
-    tech: ["HTML", "CSS", "Bootstrap"]
+    tech: ["HTML", "CSS", "Bootstrap"],
   },
 
   {
@@ -128,7 +159,7 @@ export const workData = [
     bgImage1: "/work-14(1).png",
     bgImage2: "/work-14.png",
     url: "https://customizable-dashboard-nextjs.vercel.app/",
-    tech: ["Next.js", "Tailwind CSS", "ShadcnUI", "MongoDB", "Context API"]
+    tech: ["Next.js", "Tailwind CSS", "ShadcnUI", "MongoDB", "Context API"],
   },
 
   {
@@ -139,7 +170,7 @@ export const workData = [
     bgImage1: "/work-6.png",
     bgImage2: "/work-5.png",
     url: "https://geminiclonesite.netlify.app/",
-    tech: ["React", "Bootstrap", "JavaScript", "API Integration"]
+    tech: ["React", "Bootstrap", "JavaScript", "API Integration"],
   },
 
   {
@@ -150,18 +181,17 @@ export const workData = [
     bgImage1: "/work-10(1).png",
     bgImage2: "/work-10.png",
     url: "https://shopsphere1.netlify.app/",
-    tech: ["React", "Redux", "Bootstrap", "API Integration"]
+    tech: ["React", "Redux", "Bootstrap", "API Integration"],
   },
 
   {
     title: "Article sphere",
-    description:
-      "Blog application with full CRUD using React and Firebase.",
+    description: "Blog application with full CRUD using React and Firebase.",
     bgImage: "/work-11.png",
     bgImage1: "/work-11(1).png",
     bgImage2: "/work-11.png",
     url: "https://article-sphere-5.netlify.app/",
-    tech: ["React", "Firebase", "Bootstrap"]
+    tech: ["React", "Firebase", "Bootstrap"],
   },
 
   {
@@ -171,18 +201,17 @@ export const workData = [
     bgImage: "/work-15.png",
     bgImage1: "/work-15(1).png",
     bgImage2: "/work-15.png",
-    tech: ["Angular", "Bootstrap", "Angular Material", "JSON Server"]
+    tech: ["Angular", "Bootstrap", "Angular Material", "JSON Server"],
   },
 
   {
     title: "Uber mobile app",
-    description:
-      "Uber mobile UI clone developed using React & Bootstrap.",
+    description: "Uber mobile UI clone developed using React & Bootstrap.",
     bgImage: "/uber.png",
     bgImage1: "/work-16(1).png",
     bgImage2: "/uber.png",
     url: "https://ubermobileclone.netlify.app/",
-    tech: ["React", "Bootstrap"]
+    tech: ["React", "Bootstrap"],
   },
 
   {
@@ -193,7 +222,7 @@ export const workData = [
     bgImage1: "/work-9(1).png",
     bgImage2: "/work-9.png",
     url: "https://restauranttasteharmony.netlify.app/",
-    tech: ["React", "Bootstrap", "API Integration"]
+    tech: ["React", "Bootstrap", "API Integration"],
   },
 
   {
@@ -204,8 +233,8 @@ export const workData = [
     bgImage1: "/work-12(1).png",
     bgImage2: "/works-12.png",
     url: "https://contacthb.netlify.app/",
-    tech: ["React", "Bootstrap", "API Integration"]
-  }
+    tech: ["React", "Bootstrap", "API Integration"],
+  },
 ];
 
 export const serviceData = [

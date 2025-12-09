@@ -49,9 +49,7 @@ export default function Works() {
     return () => window.removeEventListener("resize", checkIsMobile);
   }, []);
 
-  const offsetValues = isMobile
-    ? ["start 2", "end 2"]
-    : ["start 1", "end 0.8"];
+  const offsetValues = isMobile ? ["start 2", "end 2"] : ["start 1", "end 0.8"];
 
   const { scrollYProgress } = useScroll({
     target: workSectionRef,
@@ -118,16 +116,16 @@ export default function Works() {
       </div>
       <p className="mt-5 text-lg sm:text-xl font-medium">{work.description}</p>
       {/* Tech Stack */}
-<div className="flex flex-wrap gap-2 mt-3 ">
-  {work.tech?.map((item, i) => (
-    <span
-      key={i}
-      className="px-2 py-1 text-xs bg-green-200 text-gray-800 rounded"
-    >
-      {item}
-    </span>
-  ))}
-</div>
+      <div className="flex flex-wrap gap-2 mt-3 ">
+        {work.tech?.map((item, i) => (
+          <span
+            key={i}
+            className="px-2 py-1 text-xs bg-green-200 text-gray-800 rounded"
+          >
+            {item}
+          </span>
+        ))}
+      </div>
 
       {work.url && (
         <a
@@ -278,6 +276,18 @@ export default function Works() {
                       <p className="mt-5 text-lg sm:text-xl font-medium">
                         {selectedWork?.description}
                       </p>
+                      {/* Tech Stack */}
+                      <div className="flex flex-wrap gap-2 mt-3">
+                        {work.tech?.map((item, i) => (
+                          <span
+                            key={i}
+                            className="px-2 py-1 text-lg bg-green-200 text-gray-800 rounded"
+                          >
+                            {item}
+                          </span>
+                        ))}
+                      </div>
+
                       {selectedWork?.url && (
                         <a
                           href={selectedWork.url}
