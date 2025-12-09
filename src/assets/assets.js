@@ -78,6 +78,26 @@ export const assets = {
 
 export const workData = [
   {
+    title: "Frontdesk-HITL-AI",
+    description:
+      "A Human-in-the-Loop AI receptionist that escalates queries to supervisors and learns from their responses to update its knowledge base automatically.",
+    bgImage: "/fd-1.png",
+    bgImage1: "/fd-2.png",
+    bgImage2: "/fd-3.png",
+    url: "https://github.com/Jithin7777/Human-in-the-Loop-AI",
+    tech: [
+      "React",
+      "TypeScript",
+      "Vite",
+      "Tailwind CSS",
+      "Node.js",
+      "Express",
+      "MongoDB",
+      "HITL",
+      "LiveKit",
+    ],
+  },
+  {
     title: "Kube Credential System",
     description:
       "Microservice credential issuing & verification system built with Docker, TypeScript, and Node.js. Frontend uses Vite, Tailwind, shadcn, Context API, and is fully tested with Jest & React Testing Library.",
