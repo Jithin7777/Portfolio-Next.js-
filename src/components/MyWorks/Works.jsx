@@ -79,7 +79,7 @@ export default function Works() {
     }
   };
 
-  const heading = "My Works";
+  const heading = "My Works"; 
   const description =
     "Welcome to my portfolio! Explore a collection of projects showcasing my expertise in full stack development.";
 
@@ -132,7 +132,7 @@ export default function Works() {
           href={work.url}
           target="_blank"
           rel="noopener noreferrer"
-          className="mt-5 inline-block px-4 py-2 bg-black text-white rounded-xl hover:bg-gray-900"
+          className=" inline-block px-4 py-2 bg-black text-white rounded-xl hover:bg-gray-900"
         >
           Visit Website
         </a>
@@ -144,10 +144,10 @@ export default function Works() {
     <div
       ref={workSectionRef}
       id="work"
-      className="w-full rounded-t-2xl py-10 md:py-16 bg-gray-50 relative"
+      className="w-full rounded-t-2xl py-5 md:py-16 bg-gray-50 relative"
     >
       {/* Heading */}
-      <h2 className="font-Ovo text-center text-2xl sm:text-xl md:text-3xl lg:text-5xl">
+      <h2 className="font-Ovo  text-center text-2xl sm:text-xl md:text-3xl lg:text-5xl">
         {heading.split("").map((char, index) => (
           <AnimatedChar
             key={index}
@@ -214,7 +214,7 @@ export default function Works() {
                   .split(" ")
                   .map(
                     (word) =>
-                      word.charAt(0).toUpperCase() + word.slice(1).toLowerCase()
+                      word.charAt(0).toUpperCase() + word.slice(1)
                   )
                   .join(" ")}
               </h3>
@@ -254,7 +254,7 @@ export default function Works() {
                       View Details
                     </button>
                   </DialogTrigger>
-                  <DialogContent className="bg-white !rounded-xl">
+                  <DialogContent className="bg-white !rounded-xl max-w-2xl">
                     <DialogHeader>
                       <DialogTitle>
                         {selectedWork?.title
@@ -271,7 +271,7 @@ export default function Works() {
                       <img
                         src={selectedWork?.bgImage}
                         alt={selectedWork?.title}
-                        className="mt-4 w-full h-48 object-cover rounded-xl"
+                        className="mt-4 w-full h-64 object-cover rounded-xl"
                       />
                       <p className="mt-5 text-lg sm:text-xl font-medium">
                         {selectedWork?.description}

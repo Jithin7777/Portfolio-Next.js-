@@ -53,8 +53,8 @@ const Navbar = () => {
           isVisible ? "translate-y-0" : "-translate-y-full"
         }`}
       >
-        <h1 className="font-Ovo mb-3 text-2xl mt-2">Jithin Jose</h1>
-        <ul className="hidden md:flex space-x-8 rounded-md py-3 px-12 mb-3 mt-3 bg-white shadow-md">
+        <h1 className="font-Ovo mb-3 text-2xl md:text-3xl mt-2 uppercase">Jithin Jose</h1>
+        <ul className="hidden text-xl md:flex space-x-8 rounded-3xl py-3 px-12 mb-3 mt-3 bg-white shadow-md">
           <li>
             <a
               href="#top"
@@ -82,7 +82,7 @@ const Navbar = () => {
           <li>
             <a
               href="#contact"
-              className="text-charcoal hover:text-teal transition duration-300 font-Ovo"
+              className="text-charcoal  hover:text-teal transition duration-300 font-Ovo"
             >
               Contact Me
             </a>

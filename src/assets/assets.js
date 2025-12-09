@@ -78,7 +78,7 @@ export const assets = {
 
 export const workData = [
   {
-    title: "Frontdesk-HITL-AI",
+    title: "Frontdesk HITL AI",
     description:
       "A Human-in-the-Loop AI receptionist that escalates queries to supervisors and learns from their responses to update its knowledge base automatically.",
     bgImage: "/fd-1.png",
