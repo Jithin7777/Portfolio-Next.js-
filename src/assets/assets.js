@@ -392,4 +392,8 @@ export const skillsData = [
     name: "Postman",
     logo: "/postman.svg",
   },
+  {
+    name: "Prisma",
+    logo: "/prisma.svg",
+  },
 ];
