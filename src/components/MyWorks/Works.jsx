@@ -91,7 +91,7 @@ export default function Works() {
             <img
               src={work.bgImage}
               alt={work.title}
-              className="w-full h-44 object-cover rounded-xl"
+              className="h-44 w-full rounded-xl object-cover"
             />
           </div>
           {work.bgImage1 && (
@@ -99,7 +99,7 @@ export default function Works() {
               <img
                 src={work.bgImage1}
                 alt={work.title}
-                className="w-full h-48 object-cover rounded-xl"
+                className="h-48 w-full rounded-xl object-cover"
               />
             </div>
           )}
@@ -108,19 +108,19 @@ export default function Works() {
               <img
                 src={work.bgImage2}
                 alt={work.title}
-                className="w-full h-48 object-cover rounded-xl"
+                className="h-48 w-full rounded-xl object-cover"
               />
             </div>
           )}
         </Slider>
       </div>
-      <p className="mt-5 text-md sm:text-xl font-medium">{work.description}</p>
+      <p className="text-md mt-5 font-medium sm:text-xl">{work.description}</p>
       {/* Tech Stack */}
-      <div className="flex flex-wrap gap-2 mt-2 ">
+      <div className="mt-2 flex flex-wrap gap-2">
         {work.tech?.map((item, i) => (
           <span
             key={i}
-            className="px-2 py-1 text-xs bg-green-200 text-gray-800 rounded"
+            className="rounded bg-green-200 px-2 py-1 text-xs text-gray-800"
           >
             {item}
           </span>
@@ -132,7 +132,7 @@ export default function Works() {
           href={work.url}
           target="_blank"
           rel="noopener noreferrer"
-          className="mt-4 inline-block px-3 py-2 bg-black text-white text-sm rounded-xl hover:bg-gray-900"
+          className="mt-4 inline-block rounded-xl bg-black px-3 py-2 text-sm text-white hover:bg-gray-900"
         >
           Visit Website
         </a>
@@ -144,10 +144,10 @@ export default function Works() {
     <div
       ref={workSectionRef}
       id="work"
-      className="w-full rounded-t-3xl  border-t-8  border-gray-200 py-5 md:py-16 bg-gray-50 relative"
+      className="relative w-full rounded-t-3xl border-t-8 border-gray-200 bg-gray-50 py-5 md:py-16"
     >
       {/* Heading */}
-      <h2 className="font-Ovo  text-center text-2xl sm:text-xl md:text-3xl lg:text-5xl">
+      <h2 className="text-center font-Ovo text-2xl sm:text-xl md:text-3xl lg:text-5xl">
         {heading.split("").map((char, index) => (
           <AnimatedChar
             key={index}
@@ -160,7 +160,7 @@ export default function Works() {
       </h2>
 
       {/* Description */}
-      <p className="font-Ovo px-1 md:px-0 text-center max-w-3xl mx-auto mt-5 text-sm font-bold md:text-2xl ">
+      <p className="mx-auto mt-5 max-w-3xl px-1 text-center font-Ovo text-sm font-bold md:px-0 md:text-2xl">
         {description.split("").map((char, index) => (
           <AnimatedChar
             key={index}
@@ -173,11 +173,11 @@ export default function Works() {
       </p>
 
       {/* Work Grid */}
-      <div className="mt-10 grid grid-cols-1 sm:grid-cols-3 lg:grid-cols-4 gap-6 px-5 lg:px-10">
+      <div className="mt-10 grid grid-cols-1 gap-6 px-5 sm:grid-cols-3 lg:grid-cols-4 lg:px-10">
         {currentItems.map((work, index) => (
           <div
             key={index}
-            className="bg-gray-50 hover:shadow-2xl transition-shadow rounded-xl overflow-hidden"
+            className="overflow-hidden rounded-xl bg-gray-50 transition-shadow hover:shadow-2xl"
           >
             {/* Thumbnail slider */}
             <Slider {...settings}>
@@ -185,7 +185,7 @@ export default function Works() {
                 <img
                   src={work.bgImage}
                   alt={work.title}
-                  className="w-full h-40 md:h-32 lg:h-48 object-cover"
+                  className="h-40 w-full object-cover md:h-32 lg:h-48"
                 />
               </div>
               {work.bgImage1 && (
@@ -193,7 +193,7 @@ export default function Works() {
                   <img
                     src={work.bgImage1}
                     alt={work.title}
-                    className="w-full h-40 md:h-32 lg:h-48 object-cover"
+                    className="h-40 w-full object-cover md:h-32 lg:h-48"
                   />
                 </div>
               )}
@@ -202,14 +202,14 @@ export default function Works() {
                   <img
                     src={work.bgImage2}
                     alt={work.title}
-                    className="w-full h-40 md:h-32 lg:h-48 object-cover"
+                    className="h-40 w-full object-cover md:h-32 lg:h-48"
                   />
                 </div>
               )}
             </Slider>
 
-            <div className="p-4 mt-3">
-              <h3 className="font-medium text-gray-800 text-lg sm:text-xl">
+            <div className="mt-3 p-4">
+              <h3 className="text-lg font-medium text-gray-800 sm:text-xl">
                 {work.title
                   .split(" ")
                   .map((word) => word.charAt(0).toUpperCase() + word.slice(1))
@@ -222,17 +222,17 @@ export default function Works() {
                   <DrawerTrigger asChild>
                     <button
                       onClick={() => setSelectedWork(work)}
-                      className="mt-3 px-4 py-2 bg-black text-white rounded-xl hover:bg-gray-900 w-full"
+                      className="mt-3 w-full rounded-xl bg-black px-4 py-2 text-white hover:bg-gray-900"
                     >
                       View Details
                     </button>
                   </DrawerTrigger>
-                  <DrawerContent className="bg-white !rounded-t-2xl ">
+                  <DrawerContent className="!rounded-t-2xl bg-white">
                     <DrawerHeader className="flex items-center justify-between">
                       <DrawerTitle>{selectedWork?.title}</DrawerTitle>
                       <DrawerClose asChild>
-                        <button className="p-2 rounded-full bg-gray-100 hover:bg-gray-50">
-                          <X className="w-6 h-6" />
+                        <button className="rounded-full bg-gray-100 p-2 hover:bg-gray-50">
+                          <X className="h-6 w-6" />
                         </button>
                       </DrawerClose>
                     </DrawerHeader>
@@ -246,12 +246,12 @@ export default function Works() {
                   <DialogTrigger asChild>
                     <button
                       onClick={() => setSelectedWork(work)}
-                      className="mt-3 px-4 py-2 bg-black text-white rounded-xl hover:bg-gray-800 w-full sm:w-auto"
+                      className="mt-3 w-full rounded-xl bg-black px-4 py-2 text-white hover:bg-gray-800 sm:w-auto"
                     >
                       View Details
                     </button>
                   </DialogTrigger>
-                  <DialogContent className="bg-white !rounded-xl max-w-2xl">
+                  <DialogContent className="max-w-2xl !rounded-xl bg-white">
                     <DialogHeader>
                       <DialogTitle>
                         {selectedWork?.title
@@ -259,7 +259,7 @@ export default function Works() {
                           .map(
                             (word) =>
                               word.charAt(0).toUpperCase() +
-                              word.slice(1).toLowerCase()
+                              word.slice(1).toLowerCase(),
                           )
                           .join(" ")}
                       </DialogTitle>
@@ -268,17 +268,17 @@ export default function Works() {
                       <img
                         src={selectedWork?.bgImage}
                         alt={selectedWork?.title}
-                        className="mt-4 w-full h-64 object-cover rounded-xl"
+                        className="mt-4 h-64 w-full rounded-xl object-cover"
                       />
-                      <p className="mt-5 text-lg sm:text-xl font-medium">
+                      <p className="mt-5 text-lg font-medium sm:text-xl">
                         {selectedWork?.description}
                       </p>
                       {/* Tech Stack */}
-                      <div className="flex flex-wrap gap-2 mt-3">
+                      <div className="mt-3 flex flex-wrap gap-2">
                         {work.tech?.map((item, i) => (
                           <span
                             key={i}
-                            className="px-2 py-1 text-lg bg-green-200 text-gray-800 rounded"
+                            className="rounded bg-green-200 px-2 py-1 text-lg text-gray-800"
                           >
                             {item}
                           </span>
@@ -290,7 +290,7 @@ export default function Works() {
                           href={selectedWork.url}
                           target="_blank"
                           rel="noopener noreferrer"
-                          className="mt-5 inline-block px-4 py-2 bg-black text-white rounded-xl hover:bg-gray-900"
+                          className="mt-5 inline-block rounded-xl bg-black px-4 py-2 text-white hover:bg-gray-900"
                         >
                           Visit Website
                         </a>
@@ -305,43 +305,43 @@ export default function Works() {
       </div>
 
       {/* Pagination */}
-<div className="mt-6 flex justify-center">
-  <ReactPaginate
-    previousLabel={
-      <button
-        disabled={currentPage === 0}
-        className={`px-2 sm:px-3 py-1 border rounded text-sm sm:text-sm  ${
-          currentPage === 0
-            ? "bg-gray-300 text-gray-500 cursor-not-allowed"
-            : "bg-gray-200 hover:bg-gray-300"
-        }`}
-      >
-        ← Prev
-      </button>
-    }
-    nextLabel={
-      <button
-        disabled={currentPage === pageCount - 1}
-        className={`px-2 sm:px-3 py-1 border rounded text-sm sm:text-sm ${
-          currentPage === pageCount - 1
-            ? "bg-gray-300 text-gray-500 cursor-not-allowed"
-            : "bg-gray-200 hover:bg-gray-300"
-        }`}
-      >
-        Next →
-      </button>
-    }
-    breakLabel={"..."}
-    pageCount={pageCount}
-    marginPagesDisplayed={1}
-    pageRangeDisplayed={2}
-    onPageChange={handlePageClick}
-    containerClassName="flex space-x-2 text-sm sm:text-sm"
-    breakClassName="px-2 py-1"
-    pageClassName="px-2 sm:px-3 py-1 border rounded"
-    activeClassName="bg-black text-white"
-  />
-</div>
+      <div className="mt-6 flex justify-center">
+        <ReactPaginate
+          previousLabel={
+            <button
+              disabled={currentPage === 0}
+              className={`rounded border px-2 py-1 text-sm sm:px-3 sm:text-sm ${
+                currentPage === 0
+                  ? "cursor-not-allowed bg-gray-300 text-gray-500"
+                  : "bg-gray-200 hover:bg-gray-300"
+              }`}
+            >
+              ← Prev
+            </button>
+          }
+          nextLabel={
+            <button
+              disabled={currentPage === pageCount - 1}
+              className={`rounded border px-2 py-1 text-sm sm:px-3 sm:text-sm ${
+                currentPage === pageCount - 1
+                  ? "cursor-not-allowed bg-gray-300 text-gray-500"
+                  : "bg-gray-200 hover:bg-gray-300"
+              }`}
+            >
+              Next →
+            </button>
+          }
+          breakLabel={"..."}
+          pageCount={pageCount}
+          marginPagesDisplayed={1}
+          pageRangeDisplayed={2}
+          onPageChange={handlePageClick}
+          containerClassName="flex space-x-2 text-sm sm:text-sm"
+          breakClassName="px-2 py-1"
+          pageClassName="px-2 sm:px-3 py-1 border rounded"
+          activeClassName="bg-black text-white"
+        />
+      </div>
     </div>
   );
 }

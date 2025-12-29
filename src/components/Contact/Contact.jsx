@@ -29,15 +29,15 @@ const Contact = () => {
   };
 
   return (
-    <div id="contact" className="py-12 bg-white relative">
+    <div id="contact" className="relative bg-white py-12">
       {/* Heading Section */}
       <h4 className="text-center text-sm font-medium text-gray-600">
         Connect with me
       </h4>
-      <h2 className="font-Ovo text-center text-2xl sm:text-xl md:text-3xl lg:text-5xl text-gray-800 mt-2">
+      <h2 className="mt-2 text-center font-Ovo text-2xl text-gray-800 sm:text-xl md:text-3xl lg:text-5xl">
         Get in touch
       </h2>
-      <p className="font-Ovo text-center max-w-2xl mx-auto mt-5 text-gray-600">
+      <p className="mx-auto mt-5 max-w-2xl text-center font-Ovo text-gray-600">
         I'd love to hear from you! If you have any questions, comments, or
         feedback, please use the form below.
       </p>
@@ -46,23 +46,23 @@ const Contact = () => {
       <form
         onSubmit={onSubmit}
         action=""
-        className="mt-8 max-w-xl mx-auto bg-white shadow-md border-spacing-7 rounded-tl-[20px] rounded-br-[20px] rounded-lg p-6 sm:p-10"
+        className="mx-auto mt-8 max-w-xl border-spacing-7 rounded-lg rounded-br-[20px] rounded-tl-[20px] bg-white p-6 shadow-md sm:p-10"
       >
         {/* Input Fields */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+        <div className="grid grid-cols-1 gap-6 sm:grid-cols-2">
           <input
             type="text"
             name="name"
             placeholder="Enter your name"
             required
-            className="w-full rounded-xl px-4 py-2 text-gray-700 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-gray-200"
+            className="w-full rounded-lg rounded-xl border border-gray-300 px-4 py-2 text-gray-700 focus:outline-none focus:ring-2 focus:ring-gray-200"
           />
           <input
             type="email"
             name="email"
             placeholder="Enter your email"
             required
-            className="w-full rounded-xl px-4 py-2 text-gray-700 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-gray-200"
+            className="w-full rounded-lg rounded-xl border border-gray-300 px-4 py-2 text-gray-700 focus:outline-none focus:ring-2 focus:ring-gray-200"
           />
         </div>
 
@@ -72,14 +72,14 @@ const Contact = () => {
           name="message"
           placeholder="Enter your message"
           required
-          className="w-full rounded-xl mt-6 px-4 py-2 text-gray-700 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-gray-200"
+          className="mt-6 w-full rounded-lg rounded-xl border border-gray-300 px-4 py-2 text-gray-700 focus:outline-none focus:ring-2 focus:ring-gray-200"
         ></textarea>
 
         {/* Submit Button */}
 
         <button
           type="submit"
-          className="w-full mt-6 px-6 py-3 bg-black text-white font-semibold rounded-xl hover:bg-black-600 transition duration-300 flex items-center justify-center space-x-2"
+          className="hover:bg-black-600 mt-6 flex w-full items-center justify-center space-x-2 rounded-xl bg-black px-6 py-3 font-semibold text-white transition duration-300"
         >
           <span>Submit now</span>
           <Image
@@ -87,7 +87,7 @@ const Contact = () => {
             alt="Right arrow"
             width={20}
             height={20}
-            className="ml-2 "
+            className="ml-2"
           />
         </button>
       </form>

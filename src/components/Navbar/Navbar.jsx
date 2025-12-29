@@ -8,9 +8,9 @@ import MobileMenu from "../MobileMenu/MobileMenu";
 const Navbar = () => {
   const menuRef = useRef();
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const [isVisible, setIsVisible] = useState(true); 
-  const [prevScrollY, setPrevScrollY] = useState(0); 
-  const visibilityThreshold = 10; 
+  const [isVisible, setIsVisible] = useState(true);
+  const [prevScrollY, setPrevScrollY] = useState(0);
+  const visibilityThreshold = 10;
   const openMenu = () => {
     setIsMenuOpen(true);
     menuRef.current.style.transform = "translateX(0)";
@@ -26,14 +26,12 @@ const Navbar = () => {
       const currentScrollY = window.scrollY;
 
       if (currentScrollY > visibilityThreshold) {
-       
         if (currentScrollY > prevScrollY) {
           setIsVisible(false);
         } else {
           setIsVisible(true);
         }
       } else {
-        
         setIsVisible(true);
       }
 
@@ -49,16 +47,18 @@ const Navbar = () => {
   return (
     <div>
       <nav
-        className={`fixed w-full lg:px-8 xl:px-[8%] px-5 flex items-center justify-between z-50 bg-beige shadow-lg transition-transform duration-300 ${
+        className={`bg-beige fixed z-50 flex w-full items-center justify-between px-5 shadow-lg transition-transform duration-300 lg:px-8 xl:px-[8%] ${
           isVisible ? "translate-y-0" : "-translate-y-full"
         }`}
       >
-        <h1 className="font-Ovo mb-3 text-2xl md:text-3xl mt-2 uppercase">Jithin Jose</h1>
-        <ul className="hidden text-xl md:flex space-x-8 rounded-3xl py-3 px-12 mb-3 mt-3 bg-white shadow-md">
+        <h1 className="mb-3 mt-2 font-Ovo text-2xl uppercase md:text-3xl">
+          Jithin Jose
+        </h1>
+        <ul className="mb-3 mt-3 hidden space-x-8 rounded-3xl bg-white px-12 py-3 text-xl shadow-md md:flex">
           <li>
             <a
               href="#top"
-              className="text-charcoal hover:text-teal transition duration-300 font-Ovo"
+              className="text-charcoal hover:text-teal font-Ovo transition duration-300"
             >
               Home
             </a>
@@ -66,7 +66,7 @@ const Navbar = () => {
           <li>
             <a
               href="#work"
-              className="text-charcoal hover:text-teal transition duration-300 font-Ovo"
+              className="text-charcoal hover:text-teal font-Ovo transition duration-300"
             >
               My Work
             </a>
@@ -74,7 +74,7 @@ const Navbar = () => {
           <li>
             <a
               href="#skill"
-              className="text-charcoal hover:text-teal transition duration-300 font-Ovo"
+              className="text-charcoal hover:text-teal font-Ovo transition duration-300"
             >
               Skills
             </a>
@@ -82,7 +82,7 @@ const Navbar = () => {
           <li>
             <a
               href="#contact"
-              className="text-charcoal  hover:text-teal transition duration-300 font-Ovo"
+              className="text-charcoal hover:text-teal font-Ovo transition duration-300"
             >
               Contact Me
             </a>

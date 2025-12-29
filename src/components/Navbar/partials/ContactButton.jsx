@@ -7,7 +7,7 @@ const ContactButton = () => {
     <div>
       <a
         href="#contact"
-        className="hidden lg:flex md:text-xl mt-3 items-center gap-3 mb-3 px-10 py-2.5 border border-teal hover:border-charcoal hover:text-charcoal transition duration-300 rounded-full ml-4 font-Ovo text-teal"
+        className="border-teal hover:border-charcoal hover:text-charcoal text-teal mb-3 ml-4 mt-3 hidden items-center gap-3 rounded-full border px-10 py-2.5 font-Ovo transition duration-300 md:text-xl lg:flex"
       >
         Contact
         <Image src={assets.arrow_icon} alt="Arrow Icon" className="w-3" />
