@@ -4,7 +4,7 @@ import React, { useState } from "react";
 
 const Contact = () => {
   const [result, setResult] = useState("");
-
+  const unused = 42;
   const onSubmit = async (event) => {
     event.preventDefault();
     setResult("Sending....");

@@ -23,7 +23,7 @@ const Page = () => {
       }}
     >
       <Navbar />
-      <div className="sticky top-0 w-full ">
+      <div className="sticky top-0 w-full">
         <Header />
       </div>
       <Works />

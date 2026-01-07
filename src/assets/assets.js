@@ -78,6 +78,26 @@ export const assets = {
 
 export const workData = [
   {
+    title: "Smart Assignment Manager",
+    description:
+      "Role-based assignment management system built with Next.js App Router, Auth.js (NextAuth v5), Prisma, and PostgreSQL. Teachers can create, manage, and grade assignments, while students can submit work and track their grades.",
+    bgImage: "/sam-1.png",
+    bgImage1: "/sam-2.png",
+    bgImage2: "/sam-3.png",
+    url: "https://smart-assignment-manager.vercel.app/",
+    tech: [
+      "Next.js ",
+      "TypeScript",
+      "Auth.js (NextAuth v5)",
+      "Prisma",
+      "PostgreSQL",
+      "JWT",
+      "Tailwind CSS",
+      "shadcn/ui",
+    ],
+  },
+
+  {
     title: "Frontdesk HITL AI",
     description:
       "A Human-in-the-Loop AI receptionist that escalates queries to supervisors and learns from their responses to update its knowledge base automatically.",
